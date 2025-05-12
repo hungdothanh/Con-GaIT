@@ -37,7 +37,7 @@ Key Features:
 - Natural-language model explanations
 - Clinician feedback interface for review and refinement
 
-![Predictive Insight Tab](figures/tab2.jpeg)
+![Predictive Insight Tab](figures/tab3.jpeg)
 
 ---
 
