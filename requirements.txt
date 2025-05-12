@@ -1,0 +1,9 @@
+
+tensorflow==2.13.0
+numpy>=1.22.0
+pandas>=1.4.0
+matplotlib>=3.5.0
+scipy>=1.8.0
+PyEMD==1.2.0
+gradio==4.5.0
+Pillow>=9.0.0
