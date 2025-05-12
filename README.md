@@ -42,7 +42,6 @@ Key Features:
 ---
 
 ## Usage
-## Install
 Clone repo and install [requirements.txt](requirements.txt):
 
 ```
@@ -51,6 +50,9 @@ cd ai-supported-clinical-gait-analysis
 pip install -r requirements.txt  # install
 ```
 
-Run demo dashboard: ```python demo_gui.py```
+Run demo dashboard: 
+```
+python demo_gui.py
+```
 
  
