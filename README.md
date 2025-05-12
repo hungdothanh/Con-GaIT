@@ -11,7 +11,7 @@ Key Features:
 - Medication info and feature selection panel
 - Interactive gait metric summaries with reference ranges
 
-![Gait Session Summary](figure/tab1.jpeg)
+![Gait Session Summary](figures/tab1.jpeg)
 
 ---
 
@@ -24,7 +24,7 @@ Key Features:
 - Date range selection and metric filtering
 - Visual support for evaluating treatment effectiveness
 
-![Treatment Trend View](figure/tab2.jpeg)
+![Treatment Trend View](figures/tab2.jpeg)
 
 ---
 
@@ -37,10 +37,20 @@ Key Features:
 - Natural-language model explanations
 - Clinician feedback interface for review and refinement
 
-![Predictive Insight Tab](figure/tab2.jpeg)
+![Predictive Insight Tab](figures/tab2.jpeg)
 
 ---
 
+## Usage
+## Install
+Clone repo and install [requirements.txt](requirements.txt):
 
+```
+git clone https://github.com/hungdothanh/ai-supported-clinical-gait-analysis.git  # clone
+cd ai-supported-clinical-gait-analysis
+pip install -r requirements.txt  # install
+```
+
+Run demo dashboard: ```python demo_gui.py```
 
  
