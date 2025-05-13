@@ -37,12 +37,11 @@ Key Features:
 - Natural-language model explanations
 - Clinician feedback interface for review and refinement
 
-![Predictive Insight Tab](figures/tab2.jpeg)
+![Predictive Insight Tab](figures/tab3.jpeg)
 
 ---
 
 ## Usage
-## Install
 Clone repo and install [requirements.txt](requirements.txt):
 
 ```
@@ -51,6 +50,9 @@ cd ai-supported-clinical-gait-analysis
 pip install -r requirements.txt  # install
 ```
 
-Run demo dashboard: ```python demo_gui.py```
+Run demo dashboard: 
+```
+python demo_gui.py
+```
 
  
