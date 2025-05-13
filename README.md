@@ -11,7 +11,7 @@ Key Features:
 - Medication info and feature selection panel
 - Interactive gait metric summaries with reference ranges
 
-![Gait Session Summary](figures/tab1.jpeg)
+![Gait Session Summary](figures/tab1.png)
 
 ---
 
@@ -24,7 +24,7 @@ Key Features:
 - Date range selection and metric filtering
 - Visual support for evaluating treatment effectiveness
 
-![Treatment Trend View](figures/tab2.jpeg)
+![Treatment Trend View](figures/tab2.png)
 
 ---
 
@@ -37,7 +37,7 @@ Key Features:
 - Natural-language model explanations
 - Clinician feedback interface for review and refinement
 
-![Predictive Insight Tab](figures/tab3.jpeg)
+![Predictive Insight Tab](figures/tab3.png)
 
 ---
 
