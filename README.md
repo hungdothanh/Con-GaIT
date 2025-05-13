@@ -1,8 +1,10 @@
 # Clinician-Centered Dashboard for Parkinson’s Disease Care
 
-This repository contains the source code and supporting materials for a clinician-facing dashboard that integrates AI-based analysis of gait data to support Parkinson’s Disease diagnosis, monitoring, and treatment planning with **transparency**, **explainability**, and **contestability** through modular design and Expert-Guided AI Support. Three main interface tabs with several key features are presented as follows:
+This repository contains the source code and supporting materials for a clinician-facing dashboard that integrates AI-based analysis of gait data to support Parkinson’s Disease diagnosis, monitoring, and treatment planning with **transparency**, **explainability**, and **contestability** through modular design and Expert-Guided AI Support. An overview of all components is presented as follows:
 
-## 📝 Gait Session Summary
+![Overview](figures/overview.jpg)
+
+## 📝 Tab 1: Gait Session Summary
 Provides a detailed visualization of sensor signals from foot-mounted IMUs during gait sessions.
 
 Key Features:
@@ -15,7 +17,7 @@ Key Features:
 
 ---
 
-## 📊 Medication History
+## 📊 Tab 2: Medication History
 Displays longitudinal changes in gait features relative to treatment events.
 
 Key Features:
@@ -28,7 +30,7 @@ Key Features:
 
 ---
 
-## 🔍 Predictive Insight and Explanation 
+## 🔍 Tab 3: Predictive Insight and Explanation 
 Presents AI-generated clinical insights with visual and textual explanations.
 
 Key Features:
