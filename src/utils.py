@@ -1,8 +1,8 @@
 
 
-from data import preprocess_chunk
-from model import build_cnn_lstm_model
-from config import WINDOW_SIZE, NUM_CLASSES, PRETRAINED_MODEL_PATH, SELECTED_SENSORS
+from src.data import preprocess_chunk
+from src.model import build_cnn_lstm_model
+from src.config import WINDOW_SIZE, NUM_CLASSES, PRETRAINED_MODEL_PATH, SELECTED_SENSORS
 
 
 

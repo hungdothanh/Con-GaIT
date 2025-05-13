@@ -1,15 +1,15 @@
 
 from lime import lime_tabular
 
-from model import build_cnn_lstm_model
-from utils import preprocess_chunk
+from src.model import build_cnn_lstm_model
+from src.utils import preprocess_chunk
 
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
 to_categorical = tf.keras.utils.to_categorical
-from config import WINDOW_SIZE, NUM_CLASSES, PRETRAINED_MODEL_PATH, SELECTED_SENSORS
+from src.config import WINDOW_SIZE, NUM_CLASSES, PRETRAINED_MODEL_PATH, SELECTED_SENSORS
 
 
 data = np.load('preprocessed_data.npz')

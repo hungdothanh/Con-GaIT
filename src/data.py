@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from config import WINDOW_SIZE, SELECTED_SENSORS
+from src.config import WINDOW_SIZE, SELECTED_SENSORS
 import numpy as np
 import pandas as pd
 from PyEMD import EMD

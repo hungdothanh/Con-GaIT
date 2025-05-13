@@ -2,7 +2,6 @@
 
 import tensorflow as tf
 
-from utils import *
 
 
 Precision = tf.keras.metrics.Precision
