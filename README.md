@@ -45,8 +45,8 @@ Key Features:
 Clone repo and install [requirements.txt](requirements.txt):
 
 ```
-git clone https://github.com/hungdothanh/ai-supported-clinical-gait-analysis.git  # clone
-cd ai-supported-clinical-gait-analysis
+git clone https://github.com/hungdothanh/clinical-gait-analysis-system.git  # clone
+cd clinical-gait-analysis-system
 pip install -r requirements.txt  # install
 ```
 
