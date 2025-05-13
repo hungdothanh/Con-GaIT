@@ -2,9 +2,9 @@
 import gradio as gr
 from PIL import Image
 from src.config import css, js_func
-from src.data import render_gait_parameter, load_gait_data, visualize_gait_data, example_files
-from src.utils import cls_predict
-from src.xai import xai_predict_fn
+from src.data import render_gait_parameter #, load_gait_data, visualize_gait_data, example_files
+# from src.utils import cls_predict
+# from src.xai import xai_predict_fn
 
 
 
