@@ -1,4 +1,7 @@
 __pycache__/
-data/
+dataset/
 weight/
 label/
+
+# ignore preprocessed_data.npz
+*.npz
