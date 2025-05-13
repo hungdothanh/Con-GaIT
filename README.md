@@ -1,8 +1,10 @@
 # Clinician-Centered Dashboard for Parkinson’s Disease Care
 
-This repository contains the source code and supporting materials for a clinician-facing dashboard that integrates AI-based analysis of gait data to support Parkinson’s Disease diagnosis, monitoring, and treatment planning with **transparency**, **explainability**, and **contestability** through modular design and Expert-Guided AI Support. Three main interface's tabs with several key features are presented as follows:
+This repository contains the source code and supporting materials for a clinician-facing dashboard that integrates AI-based analysis of gait data to support Parkinson’s Disease diagnosis, monitoring, and treatment planning with **transparency**, **explainability**, and **contestability** through modular design and Expert-Guided AI Support. An overview of all components is presented as follows:
 
-## 📝 Gait Session Summary
+![Overview](figures/overview.jpg)
+
+## 📝 Tab 1: Gait Session Summary
 Provides a detailed visualization of sensor signals from foot-mounted IMUs during gait sessions.
 
 Key Features:
@@ -11,11 +13,11 @@ Key Features:
 - Medication info and feature selection panel
 - Interactive gait metric summaries with reference ranges
 
-![Gait Session Summary](figures/tab1.jpeg)
+![Gait Session Summary](figures/tab1.png)
 
 ---
 
-## 📊 Medication History
+## 📊 Tab 2: Medication History
 Displays longitudinal changes in gait features relative to treatment events.
 
 Key Features:
@@ -24,20 +26,20 @@ Key Features:
 - Date range selection and metric filtering
 - Visual support for evaluating treatment effectiveness
 
-![Treatment Trend View](figures/tab2.jpeg)
+![Treatment Trend View](figures/tab2.png)
 
 ---
 
-## 🔍 Predictive Insight and Explanation 
+## 🔍 Tab 3: Predictive Insight and Explanation 
 Presents AI-generated clinical insights with visual and textual explanations.
 
 Key Features:
-- Predictions for disease severity and progression
-- SHAP-based sensor feature contribution plots
-- Natural-language model explanations
-- Clinician feedback interface for review and refinement
+- Predictions for disease severity scores and progression probability
+- XAI interpretable plots
+- LLM text-based explanations
+- Contestable AI principles: Clinician feedback interface for review and refinement
 
-![Predictive Insight Tab](figures/tab3.jpeg)
+![Predictive Insight Tab](figures/tab3.png)
 
 ---
 
@@ -45,8 +47,8 @@ Key Features:
 Clone repo and install [requirements.txt](requirements.txt):
 
 ```
-git clone https://github.com/hungdothanh/ai-supported-clinical-gait-analysis.git  # clone
-cd ai-supported-clinical-gait-analysis
+git clone https://github.com/hungdothanh/clinical-gait-analysis-system.git  # clone
+cd clinical-gait-analysis-system
 pip install -r requirements.txt  # install
 ```
 
