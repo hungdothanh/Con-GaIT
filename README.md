@@ -15,7 +15,9 @@ Visualize per-session gait features (e.g., stride amplitude, freezing) against n
 
 Clinicians can drill down to individual gait cycles and compare patient data against age-matched norms.
 
-<img src="figures/tab1.jpeg" alt="Gait Session Summary" width="80%" />
+<p align="center">
+    <img src="figures/tab1.jpeg" alt="Gait Session Summary" width="80%" />
+</p>
 
 
 ## 📈 Tab 2: Treatment Trend View
@@ -29,8 +31,9 @@ Track longitudinal gait changes alongside medication and intervention history:
 
 Prioritizes interpretability and traceability by linking each data point to source recordings and medication logs.
 
-<img src="figures/tab2.jpeg" alt="Treatment Trend View" width="80%" />
-
+<p align="center">
+    <img src="figures/tab2.jpeg" alt="Treatment Trend View" width="80%" />
+</p>
 
 
 ## 🔍 Tab 3: Predictive Insight & Explanation
@@ -51,9 +54,10 @@ Implement core CAI functions for contestable AI:
    - System responds with refined justification or model correction  
 5. **Immutable audit trail**  
    - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
-
-<img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="80%" />
-
+   
+<p align="center">
+    <img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="80%" />
+</p>
 
 
 ## Usage
@@ -61,13 +65,13 @@ Clone repo and install [requirements.txt](requirements.txt):
 
 ```
 git clone https://github.com/hungdothanh/Con-GaIT.git
-cd clinical-gait-analysis-system
-pip install -r requirements.txt  # install
+cd Con-GaIT
+pip install -r requirements.txt
 ```
 
 Run demo dashboard: 
 ```
-python demo_gui.py
+python app.py
 ```
 
  
