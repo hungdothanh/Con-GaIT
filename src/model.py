@@ -1,57 +1,73 @@
+#------------model.py------------
+import torch
+import torch.nn as nn
 
-
-import tensorflow as tf
-
-
-
-Precision = tf.keras.metrics.Precision
-Recall = tf.keras.metrics.Recall
-Adam = tf.keras.optimizers.Adam
-Model = tf.keras.models.Model
-load_model = tf.keras.models.load_model
-Input = tf.keras.layers.Input
-Conv1D = tf.keras.layers.Conv1D
-MaxPooling1D = tf.keras.layers.MaxPooling1D
-LSTM = tf.keras.layers.LSTM
-Flatten = tf.keras.layers.Flatten
-Dense = tf.keras.layers.Dense
-Dropout = tf.keras.layers.Dropout
-l2 = tf.keras.regularizers.l2
-
-
-def build_cnn_lstm_model(input_shape, num_classes=4):
-    """Build the CNN-LSTM model as described in Table 5 of the paper."""
-    inputs = Input(shape=input_shape)
+class ParkinsonsGaitCNN(nn.Module):
+    """CNN model for Parkinson's gait analysis matching the provided architecture"""
     
-    # 1st Convolution + Pooling
-    x = Conv1D(filters=12, kernel_size=1, activation='relu', strides=1, padding='same', kernel_regularizer=l2(0.01))(inputs)
-    x = MaxPooling1D(pool_size=2, strides=2)(x)
-    
-    # 2nd Convolution + Pooling
-    x = Conv1D(filters=24, kernel_size=3, activation='relu', strides=1, padding='same', kernel_regularizer=l2(0.01))(x)
-    x = MaxPooling1D(pool_size=2, strides=2)(x)
-    
-    # 3rd Convolution + Pooling
-    x = Conv1D(filters=48, kernel_size=3, activation='relu', strides=1, padding='same', kernel_regularizer=l2(0.01))(x)
-    x = MaxPooling1D(pool_size=2, strides=2)(x)
-    
-    # 4th Convolution + Pooling
-    x = Conv1D(filters=96, kernel_size=3, activation='relu', strides=1, padding='same', kernel_regularizer=l2(0.01))(x)
-    x = MaxPooling1D(pool_size=2, strides=2)(x)
-    
-    # LSTM layers
-    x = LSTM(50, return_sequences=True)(x)
-    x = Dropout(0.2)(x)
-    x = LSTM(50)(x)
-    x = Dropout(0.2)(x)
-   
-    x = Dense(100, activation='relu', kernel_regularizer=l2(0.01))(x)
-    x = Dense(25, kernel_regularizer=l2(0.01))(x)
-    
-    # Output layer
-    outputs = Dense(num_classes, activation='softmax')(x)
-    
+    def __init__(self, input_channels: int = 3, sequence_length: int = 1000):
+        super(ParkinsonsGaitCNN, self).__init__()
+        
+        # First Conv2D + AveragePooling block
+        self.conv1 = nn.Conv1d(input_channels, 64, kernel_size=7, padding=3)
+        self.pool1 = nn.AvgPool1d(kernel_size=2, stride=2)
+        
+        # Second Conv2D + AveragePooling block  
+        self.conv2 = nn.Conv1d(64, 128, kernel_size=5, padding=2)
+        self.pool2 = nn.AvgPool1d(kernel_size=2, stride=2)
+        
+        # Third Conv2D + AveragePooling block
+        self.conv3 = nn.Conv1d(128, 256, kernel_size=3, padding=1)
+        self.pool3 = nn.AvgPool1d(kernel_size=2, stride=2)
+        
+        # Fourth Conv2D + AveragePooling block
+        self.conv4 = nn.Conv1d(256, 512, kernel_size=3, padding=1)
+        self.pool4 = nn.AvgPool1d(kernel_size=2, stride=2)
+        
+        # Activation functions
+        self.relu = nn.ReLU()
+        # Calculate flattened size
+        self.flattened_size = self._get_flattened_size(input_channels, sequence_length)
+        
+        # Fully connected layers
+        self.dropout = nn.Dropout(0.5)
+        self.fc1 = nn.Linear(self.flattened_size, 256)
+        self.fc2 = nn.Linear(256, 128)
+        self.fc3 = nn.Linear(128, 4)  # Output layer for 4-class classification
+        
 
-    model = Model(inputs, outputs)
-
-    return model
+        
+    def _get_flattened_size(self, input_channels: int, sequence_length: int) -> int:
+        """Calculate the size after convolution and pooling layers"""
+        x = torch.randn(1, input_channels, sequence_length)
+        x = self.pool1(self.relu(self.conv1(x)))
+        x = self.pool2(self.relu(self.conv2(x)))
+        x = self.pool3(self.relu(self.conv3(x)))
+        x = self.pool4(self.relu(self.conv4(x)))
+        return x.numel()
+    
+    def forward(self, x):
+        # Conv2D + AveragePooling blocks
+        x = self.relu(self.conv1(x))
+        x = self.pool1(x)
+        
+        x = self.relu(self.conv2(x))
+        x = self.pool2(x)
+        
+        x = self.relu(self.conv3(x))
+        x = self.pool3(x)
+        
+        x = self.relu(self.conv4(x))
+        x = self.pool4(x)
+        
+        # Flatten
+        x = x.view(x.size(0), -1)
+        
+        # Fully connected layers with dropout
+        x = self.dropout(x)
+        x = self.relu(self.fc1(x))
+        x = self.dropout(x)
+        x = self.relu(self.fc2(x))
+        x = self.fc3(x)
+        
+        return x

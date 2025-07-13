@@ -3,5 +3,4 @@ dataset/
 weight/
 label/
 
-# ignore preprocessed_data.npz
-*.npz
+demo_gui_wo_llm.py

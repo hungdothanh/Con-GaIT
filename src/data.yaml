@@ -1,0 +1,54 @@
+Patient A:
+  gait_file: "dataset/SiCo01_01.txt"
+  age: 53
+  gender: "Female"
+  weight: "56 kg"
+  height: "1.53 m"
+  medications:
+    Med E: 12
+  daily_metrics:
+    STRIDE AMPLITUDE: [
+      138, 142, 140, 145, 143, 141, 144, 146, 147, 145,
+      148, 150, 149, 151, 152, 150, 153, 154, 152, 151,
+      153, 155, 154, 156, 157, 155, 158, 159, 157, 156
+    ]
+    STRIDE SPEED: [
+      105, 108, 110, 112, 109, 111, 113, 115, 114, 112,
+      116, 118, 117, 119, 120, 118, 121, 122, 120, 119,
+      121, 123, 122, 124, 125, 123, 126, 127, 125, 124
+    ]
+    HEEL STRIKE: [
+      59, 58, 60, 61, 59, 60, 62, 60, 61, 59,
+      60, 61, 62, 60, 59, 58, 60, 61, 60, 59,
+      60, 62, 61, 60, 59, 58, 60, 61, 60, 59
+    ]
+
+Patient B:
+  gait_file: "dataset/GaPt09_01.txt"
+  age: 69
+  gender: "Male"
+  weight: "68 kg"
+  height: "1.60 m"
+  medications:
+    Med A - Therapy B: 02
+    Med C - Therapy D: 10
+  daily_metrics:
+    STRIDE AMPLITUDE: [
+      81, 83, 82, 84, 83, 81, 82, 83, 85, 84,   # Days 1–10, impaired (<100 cm)
+      86, 88, 89, 90, 92, 93, 94, 95, 95, 96,             # Days 11–20, improving but <100
+      96, 97, 97, 98, 98, 99, 99, 99, 100, 100             # Days 21–30, approaches threshold
+    ]
+    STRIDE SPEED: [
+      72, 74, 73, 75, 74, 71, 72, 74, 75, 74,    # Days 1–10 (<90 steps/min)
+      76, 78, 80, 82, 84, 86, 88, 89, 89, 90,              # Days 11–20 (<100)
+      90, 91, 91, 92, 92, 93, 93, 94, 94, 95               # Days 21–30, improving
+    ]
+    HEEL STRIKE: [
+      65, 64, 66, 67, 65, 64, 66, 65, 66, 64,              # Days 1–10 (>60% stance)
+      63, 62, 62, 61, 61, 61, 61, 60, 60, 60,              # Days 11–20 (improving but ≥60)
+      60, 60, 60, 60, 60, 60, 60, 60, 60, 60               # Days 21–30, around threshold
+    ]
+  forecast_metrics:
+    STRIDE AMPLITUDE: [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114]
+    STRIDE SPEED:     [96,  97,  98,  99,  100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+    HEEL STRIKE:      [59,  58,  57,  56,   55,  54,  53,  52,  51,  50,  49,  48,  47,  46]
