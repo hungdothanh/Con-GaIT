@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [🖥️ Dashboard Interface with Gradio](#dashboard-interface-with-gradio) 
+- [Dashboard Interface with Gradio](#dashboard-interface-with-gradio) 
 - [Tab 1: Gait Session Summary](#tab-1-gait-session-summary)  
 - [Tab 2: Treatment Trend View](#tab-2-treatment-trend-view)  
 - [Tab 3: Predictive Insight & Explanation](#tab-3-predictive-insight--explanation)  
