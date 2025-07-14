@@ -1,7 +1,27 @@
 
 # ConGaIT: Contestable Gait Interpretation & Tracking Dashboard for Parkinson’s Disease Care
 
+
+## Table of Contents
+
+- [🖥️ Dashboard Interface with Gradio](#dashboard-interface-with-gradio) 
+- [Tab 1: Gait Session Summary](#tab-1-gait-session-summary)  
+- [Tab 2: Treatment Trend View](#tab-2-treatment-trend-view)  
+- [Tab 3: Predictive Insight & Explanation](#tab-3-predictive-insight--explanation)  
+- [Installation and Usage](#installation-and-usage)
+- [Proof of Concept](proof-of-concept)
+
+
+## Overview
+
 This repository contains the source code and supporting materials for **ConGaIT** (Contestable Gait Interpretation & Tracking), a clinician-centered dashboard that embeds Contestable AI (CAI) principles across all interaction layers. Built on human–computer interaction (HCI) and procedural justice foundations, ConGaIT delivers **explainable**, **justifiable**, and **auditable** AI support in Parkinson’s Disease (PD) diagnosis, monitoring, and treatment planning.
+
+
+## Dashboard Interface with Gradio
+
+ConGaIT’s interactive GUI is built on [Gradio](https://github.com/gradio-app/gradio) — a lightweight Python library for turning your functions into shareable web apps with minimal code.
+
+By leveraging Gradio’s declarative, component-driven architecture, ConGaIT delivers a responsive, shareable web app—clinicians can explore raw signals, review longitudinal trends, and engage in contestable AI flows, all without managing a full-stack framework.
 
 
 ## 📝 Tab 1: Gait Session Summary
@@ -11,7 +31,6 @@ Visualize per-session gait features (e.g., stride amplitude, freezing) against n
 - **Color-coded indicators** for quick deviation detection  
 - **Interactive 10-second interval explorer**  
 - **Sensor channel toggles** & **raw VGRF waveform** view  
-- **Context-aware tooltips** explaining each metric in clinical terms  
 
 Clinicians can drill down to individual gait cycles and compare patient data against age-matched norms.
 
@@ -54,13 +73,13 @@ Implement core CAI functions for contestable AI:
    - System responds with refined justification or model correction  
 5. **Immutable audit trail**  
    - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
-   
+
 <p align="center">
     <img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="80%" />
 </p>
 
 
-## Usage
+## Installation and Usage
 Clone repo and install [requirements.txt](requirements.txt):
 
 ```
@@ -69,9 +88,24 @@ cd Con-GaIT
 pip install -r requirements.txt
 ```
 
+Open [config.py](config.py) and replace the **MY_KEY** with your **OPENAI_API_KEY**
+```
+# config.py
+OPENAI_API_KEY = "your-openai-api-key-here"
+```
+
 Run demo dashboard: 
 ```
 python app.py
 ```
 
- 
+## Proof of Concept
+
+See ConGaIT in action! Watch our demonstration video to explore the dashboard’s key features—from session summaries and treatment trends to contestable AI insights:
+
+<p align="center">
+  <a href="https://youtu.be/vpFJyan8fIQ">
+    <img src="figures/demo_thumbnail.png" alt="ConGaIT Demo" width="80%" />
+  </a>
+</p>
+
