@@ -43,10 +43,9 @@ Clinicians can drill down to individual gait cycles and compare patient data aga
 
 Track longitudinal gait changes alongside medication and intervention history:
 
-- **Overlay medication events** (e.g., levodopa doses, DBS adjustments)  
+- **Overlay medication events** to assess treatment response  
 - **AI-based forecasts** of gait metrics for proactive planning  
 - **Date-range selector** and **metric filtering**  
-- **Alignment with therapeutic milestones** to assess treatment response  
 
 Prioritizes interpretability and traceability by linking each data point to source recordings and medication logs.
 
@@ -63,14 +62,14 @@ Implement core CAI functions for contestable AI:
    - Predicts Hoehn & Yahr stage from 10-second gait windows  
 2. **Layer-wise Relevance Propagation (LRP)**  
    - Highlights key sensors and temporal segments driving predictions  
-3. **LLM-driven justifications**  
-   - Meta-Llama-3-8B-Instruct generates rule-based clinical explanations  
-4. **Contest & Justify** feedback flow  
+3. **Contest & Justify** feedback flow  
    - Clinicians select an argument type:
      - **Factual Error** (data/input issue)  
      - **Normative Conflict** (clinical-context mismatch)  
      - **Reasoning Flaw** (implausible attribution)  
-   - System responds with refined justification or model correction  
+   - System responds with refined justification or model correction
+4. **LLM-driven justifications**  
+   - Passes LRP's explanation, argument flag, and user feedback via a LLM's API to generate rule-based textual explanations  
 5. **Immutable audit trail**  
    - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
 
