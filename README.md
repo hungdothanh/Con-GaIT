@@ -26,13 +26,11 @@ By leveraging Gradio’s declarative, component-driven architecture, ConGaIT del
 
 ## 📝 Tab 1: Gait Session Summary
 
-Visualize per-session gait features (e.g., stride amplitude, freezing) against normative ranges:
+Visualize per-session gait features (e.g., stride amplitude, heel strike) against normative ranges:
 
 - **Color-coded indicators** for quick deviation detection  
-- **Interactive 10-second interval explorer**  
+- **Interactive 10-second interval inspector**  
 - **Sensor channel toggles** & **raw VGRF waveform** view  
-
-Clinicians can drill down to individual gait cycles and compare patient data against age-matched norms.
 
 <p align="center">
     <img src="figures/tab1.jpeg" alt="Gait Session Summary" width="80%" />
@@ -46,8 +44,6 @@ Track longitudinal gait changes alongside medication and intervention history:
 - **Overlay medication events** to assess treatment response  
 - **AI-based forecasts** of gait metrics for proactive planning  
 - **Date-range selector** and **metric filtering**  
-
-Prioritizes interpretability and traceability by linking each data point to source recordings and medication logs.
 
 <p align="center">
     <img src="figures/tab2.jpeg" alt="Treatment Trend View" width="80%" />
@@ -69,7 +65,11 @@ Implement core CAI functions for contestable AI:
      - **Reasoning Flaw** (implausible attribution)  
    - System responds with refined justification or model correction
 4. **LLM-driven justifications**  
-   - Passes LRP's explanation, argument flag, and user feedback via a LLM's API to generate rule-based textual explanations  
+   - Consolidates the LRP heatmap, selected contest type, and clinician feedback
+
+   - Transmits this structured input to a language‑model API
+
+   - Generates concise, rule‑based textual explanations that contextualize the model’s reasoning and directly address the clinician’s concerns
 5. **Immutable audit trail**  
    - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
 
@@ -102,9 +102,13 @@ python app.py
 
 See ConGaIT in action! Watch our demonstration video to explore the dashboard’s key features—from session summaries and treatment trends to contestable AI insights:
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://drive.google.com/file/d/1cE-WHRHtQEVe_SZghwaAFMD5DEg6Otpj/view?usp=drive_link">
     <img src="figures/demo_thumbnail.png" alt="ConGaIT Demo" width="80%" />
   </a>
+</p> -->
+
+<p align="center">
+  [>>> Click here <<<](https://drive.google.com/file/d/1cE-WHRHtQEVe_SZghwaAFMD5DEg6Otpj/view?usp=drive_link)
 </p>
 
