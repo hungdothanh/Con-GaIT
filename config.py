@@ -1,7 +1,7 @@
 #------------------config.py------------------
 from openai_api import MY_KEY
 
-PRETRAINED_MODEL_PATH = 'C:\\Users\\hungd\\OneDrive\\FAU\\StudOn\\SS25\\Human Computer Interaction (HCI)\\Student Research Competition (SRC)\\clinical-gait-analysis-system\\weight\\congait-small.pth'
+PRETRAINED_MODEL_PATH = 'weights/congait-small.pth'
 SEGMENT_LENGTH = 1000  # 10 seconds at 100Hz 
 NUM_CLASSES = 4  # Healthy, Stage 2, Stage 2.5, Stage 3
 CLASS_NAMES = ["Healthy","Stage 2","Stage 2.5","Stage 3"]
