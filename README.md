@@ -19,9 +19,9 @@ This repository contains the source code and supporting materials for **ConGaIT*
 
 ## Dashboard Interface with Gradio
 
-ConGaIT’s interactive GUI is built on [Gradio](https://github.com/gradio-app/gradio) — a lightweight Python library for turning your functions into shareable web apps with minimal code.
+ConGaIT’s interactive GUI is built on [Gradio](https://github.com/gradio-app/gradio), a lightweight Python library for turning your functions into shareable web apps with minimal code.
 
-By leveraging Gradio’s declarative, component-driven architecture, ConGaIT delivers a responsive, shareable web app—clinicians can explore raw signals, review longitudinal trends, and engage in contestable AI flows, all without managing a full-stack framework.
+Thanks to Gradio’s declarative, component-driven architecture, ConGaIT delivers a responsive, shareable web app where clinicians can explore raw signals, review longitudinal trends, and engage in contestable AI flows, all without having to manage a full-stack framework.
 
 
 ## 📝 Tab 1: Gait Session Summary
