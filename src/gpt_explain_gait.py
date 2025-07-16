@@ -1,5 +1,5 @@
 
-# ----------------- src/gpt_exp_gait.py (new file) -----------------
+# ----------------- gpt_exp_gait.py-----------------
 import requests
 from config import OPENAI_API_KEY, CLASS_NAMES
 from src.utils import convert_matplotlib_fig_to_base64
