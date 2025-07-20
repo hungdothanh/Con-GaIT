@@ -100,7 +100,7 @@ python app.py
 
 ## Proof of Concept
 
-See ConGaIT in action! Watch our demonstration video to explore the dashboard’s key features—from session summaries and treatment trends to contestable AI insights:
+See ConGaIT in action! Watch our demonstration video to explore the dashboard’s key features, from session summaries and treatment trends to contestable AI insights:
 <p align="center">
   <a href="https://drive.google.com/file/d/1cE-WHRHtQEVe_SZghwaAFMD5DEg6Otpj/view?usp=drive_link">>>> Click here <<<</a>
 </p>
