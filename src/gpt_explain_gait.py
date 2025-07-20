@@ -23,26 +23,26 @@ def gpt_flag_justify(patient_name,
     previous_justification_section = previous_generated_justification if previous_generated_justification else ''
     feedback_section = user_feedback if user_feedback else ''
     prompt = (
-        f"-- System --"
+        f"-- System --" +
         f"You are an Explainable AI expert in Parkinson’s Disease gait‐analysis models. \n\n" +
 
-        f"-- Context --"
+        f"-- Context --" +
         f"Patient={patient_name}, Segment={segment_index}, " +
         f"Predicted Hoehn and Yahr Stage={predicted_stage} ({confidence:.1%} confidence). \n\n" +
 
         f"Argument flag types: {flag_list}, " +
         f"brief description of flag types: Factual Error (e.g., incorrect input), Normative Conflict (e.g., clinical context mismatch), or Reasoning Flaw (e.g., implausible attribution). \n\n" +
-        f"User feedback on your previous generated justification: {feedback_section}." +
-        f"Your previous generated justification {previous_justification_section} (in case user feedback is provided -> Update your points to address clinician’s concerns.)" + 
+        f"User feedback on your previous generated justification: {feedback_section}. \n" +
+        f"Your previous generated justification {previous_justification_section} (in case user feedback is provided -> Update your points to address clinician’s concerns.) \n" + 
 
         f"The attached image is explanation overlay for the selected sensor of top-5 with highlighted regions on the raw signal plot. \n\n" +
         
-        f"-- Task --"
+        f"-- Task --" +
         f"Your final answer should be correct, intuitive, compact, and simple for end-users to understand. " + 
         f"Your final answer should be separated by bullet points (keep bullets under max 2 sentences each)." + 
         
-        f"Based on the attached LRP explanation image, provide justifications evaluating whether these highlighted gait patterns support or contradict the model's predicted Hoehn & Yahr stage. "
-        f"Address each flagged issue in turn (focus on explain whether each flag issue of the {flag_list} can cause a mis-prediction of the model) and offer a clear conclusion."
+        f"Based on the attached LRP explanation image, provide justifications evaluating whether these highlighted gait patterns support or contradict the model's predicted Hoehn & Yahr stage. " +
+        f"Address each flagged issue in turn (focus on explain whether each flag issue of the {flag_list} can cause a mis-prediction of the model) and offer a clear conclusion." 
     )
 
     # Prepare image attachments
