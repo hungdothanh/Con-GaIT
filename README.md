@@ -14,7 +14,7 @@
 
 ## Overview
 
-This repository contains the source code and supporting materials for **ConGaIT** (Contestable Gait Interpretation & Tracking), a clinician-centered dashboard that embeds Contestable AI (CAI) principles across all interaction layers. Built on human–computer interaction (HCI) and procedural justice foundations, ConGaIT delivers **explainable**, **justifiable**, and **auditable** AI support in Parkinson’s Disease (PD) diagnosis, monitoring, and treatment planning.
+This repository contains the source code and supporting materials for **ConGaIT** (Contestable Gait Interpretation & Tracking), a clinician-centered dashboard that embeds Contestable AI (CAI) principles across all interaction layers. Built on human-computer interaction (HCI) and procedural justice foundations, ConGaIT delivers **explainable**, **justifiable**, and **auditable** AI support in Parkinson’s Disease (PD) diagnosis, monitoring, and treatment planning.
 
 
 ## Dashboard Interface with Gradio
