@@ -1,9 +1,9 @@
 
-# ConGaIT: Contestable Gait Interpretation & Tracking Dashboard for Parkinson’s Disease Care
-
+# ConGaIT: A Clinician-Centered Dashboard for Contestable AI in Parkinson’s Disease Care
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Dashboard Interface with Gradio](#dashboard-interface-with-gradio) 
 - [Tab 1: Gait Session Summary](#tab-1-gait-session-summary)  
 - [Tab 2: Treatment Trend View](#tab-2-treatment-trend-view)  
@@ -14,8 +14,12 @@
 
 ## Overview
 
-This repository contains the source code and supporting materials for **ConGaIT** (Contestable Gait Interpretation & Tracking), a clinician-centered dashboard that embeds Contestable AI (CAI) principles across all interaction layers. Built on human–computer interaction (HCI) and procedural justice foundations, ConGaIT delivers **explainable**, **justifiable**, and **auditable** AI support in Parkinson’s Disease (PD) diagnosis, monitoring, and treatment planning.
+This repository contains the source code and supporting materials for **ConGaIT** (Contestable Gait Interpretation & Tracking), a clinician-centered dashboard that embeds Contestable AI (CAI) principles across all interaction layers. Built on human computer interaction (HCI) and procedural justice foundations, ConGaIT delivers **explainable**, **justifiable**, and **auditable** AI support in Parkinson’s Disease (PD) diagnosis, monitoring, and treatment planning.
 
+The diagram below presents the end-to-end pipeline powering ConGaIT, that is how raw gait data flows through the system for visulization and record tracking from the beginning, to explainable prediction insight and contestable justification between clinicians and Large Language Models (LLMs).
+<p align="center"> 
+   <img src="figures/framework.png" alt="ConGaIT System Pipeline" width="90%" /> 
+</p>
 
 ## Dashboard Interface with Gradio
 
@@ -33,7 +37,7 @@ Visualize per-session gait features (e.g., stride amplitude, heel strike) agains
 - **Sensor channel toggles** & **raw VGRF waveform** view  
 
 <p align="center">
-    <img src="figures/tab1.jpeg" alt="Gait Session Summary" width="80%" />
+    <img src="figures/tab1.jpeg" alt="Gait Session Summary" width="90%" />
 </p>
 
 
@@ -46,7 +50,7 @@ Track longitudinal gait changes alongside medication and intervention history:
 - **Date-range selector** and **metric filtering**  
 
 <p align="center">
-    <img src="figures/tab2.jpeg" alt="Treatment Trend View" width="80%" />
+    <img src="figures/tab2.jpeg" alt="Treatment Trend View" width="90%" />
 </p>
 
 
@@ -74,7 +78,7 @@ Implement core CAI functions for contestable AI:
    - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
 
 <p align="center">
-    <img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="80%" />
+    <img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="90%" />
 </p>
 
 
