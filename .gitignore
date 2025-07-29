@@ -1,6 +1,5 @@
 __pycache__/
-dataset/
-weight/
-label/
+dataset_full/
+
 
 openai_api.py
