@@ -32,9 +32,9 @@ Thanks to Gradio’s declarative, component-driven architecture, ConGaIT deliver
 
 Visualize per-session gait features (e.g., stride amplitude, heel strike) against normative ranges:
 
-- **Color-coded indicators** for quick deviation detection  
-- **Interactive 10-second interval inspector**  
-- **Sensor channel toggles** & **raw VGRF waveform** view  
+- **Color-coded indicators** for quick deviation detection.
+- **Interactive 10-second interval inspector**.  
+- **Sensor channel toggles** & **raw VGRF waveform** view.
 
 <p align="center">
     <img src="figures/tab1.jpeg" alt="Gait Session Summary" width="90%" />
@@ -45,9 +45,9 @@ Visualize per-session gait features (e.g., stride amplitude, heel strike) agains
 
 Track longitudinal gait changes alongside medication and intervention history:
 
-- **Overlay medication events** to assess treatment response  
-- **AI-based forecasts** of gait metrics for proactive planning  
-- **Date-range selector** and **metric filtering**  
+- **Date-range selector** and **metric filtering**.  
+- **Overlay medication events** to assess treatment response.  
+- **AI-based forecasts** of gait metrics for proactive planning.  
 
 <p align="center">
     <img src="figures/tab2.jpeg" alt="Treatment Trend View" width="90%" />
@@ -58,24 +58,22 @@ Track longitudinal gait changes alongside medication and intervention history:
 
 Implement core CAI functions for contestable AI:
 
-1. **CNN-based severity classifier**  
+1. **CNN-based severity classifier**:  
    - Predicts Hoehn & Yahr stage from 10-second gait windows  
-2. **Layer-wise Relevance Propagation (LRP)**  
-   - Highlights key sensors and temporal segments driving predictions  
-3. **Contest & Justify** feedback flow  
+2. **Layer-wise Relevance Propagation (LRP)**:  
+   - Highlights key sensors and temporal segments driving predictions.  
+3. **Contest & Justify**:  
    - Clinicians select an argument type:
-     - **Factual Error** (data/input issue)  
-     - **Normative Conflict** (clinical-context mismatch)  
-     - **Reasoning Flaw** (implausible attribution)  
-   - System responds with refined justification or model correction
-4. **LLM-driven justifications**  
-   - Consolidates the LRP heatmap, selected contest type, and clinician feedback
-
-   - Transmits this structured input to a language‑model API
-
-   - Generates concise, rule‑based textual explanations that contextualize the model’s reasoning and directly address the clinician’s concerns
-5. **Immutable audit trail**  
-   - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement
+     - **Factual Error** (data/input issue).  
+     - **Normative Conflict** (clinical-context mismatch).  
+     - **Reasoning Flaw** (implausible attribution).  
+   - System responds with refined justification or model correction.
+4. **LLM-driven justifications**:  
+   - Consolidates the LRP heatmap, selected contest type, and clinician feedback.
+   - Transmits this structured input to a language‑model API.
+   - Generates concise, rule‑based textual explanations that contextualize the model’s reasoning and directly address the clinician’s concerns.
+5. **Immutable audit trail**:  
+   - Logs all predictions, explanations, contests, and clinician actions for oversight and model improvement.
 
 <p align="center">
     <img src="figures/tab3.jpeg" alt="Predictive Insights and Explanations" width="90%" />
